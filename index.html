@@ -1,0 +1,116 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>vim-lucky-markdown by avdgaag</title>
+
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
+    <script src="javascripts/scale.fix.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <h1>vim-lucky-markdown</h1>
+        <p>Vim completion of Markdown links with Google search results</p>
+        <p class="view"><a href="https://github.com/avdgaag/vim-lucky-markdown">View the Project on GitHub <small>avdgaag/vim-lucky-markdown</small></a></p>
+        <ul>
+          <li><a href="https://github.com/avdgaag/vim-lucky-markdown/zipball/master">Download <strong>ZIP File</strong></a></li>
+          <li><a href="https://github.com/avdgaag/vim-lucky-markdown/tarball/master">Download <strong>TAR Ball</strong></a></li>
+          <li><a href="https://github.com/avdgaag/vim-lucky-markdown">View On <strong>GitHub</strong></a></li>
+        </ul>
+      </header>
+      <section>
+        <h1>
+<a id="lucky-markdownvim" class="anchor" href="#lucky-markdownvim" aria-hidden="true"><span class="octicon octicon-link"></span></a>lucky-markdown.vim</h1>
+
+<p>Vim completion of Markdown links with top Google search results</p>
+
+<h2>
+<a id="introduction" class="anchor" href="#introduction" aria-hidden="true"><span class="octicon octicon-link"></span></a>Introduction</h2>
+
+<p>lucky-markdown is a simple plugin that allows you to quickly fetch the top
+Google result for a link in a Markdown document.</p>
+
+<h2>
+<a id="installation" class="anchor" href="#installation" aria-hidden="true"><span class="octicon octicon-link"></span></a>Installation</h2>
+
+<p>To use lucky-markdown you need Vim to be compiled with Ruby support.</p>
+
+<p>The recommeded installation method is through a Vim plugin manager such as
+Pathon or Vundle. For example, to install with Pathogen:</p>
+
+<pre><code>cd ~/.vim/bundle
+git clone git://github.com/avdgaag/vim-lucky-markdown.git
+</code></pre>
+
+<p>For more information on how these plugin managers work, please refer to their
+documentation.</p>
+
+<p>If you don't want to or cannot use such plugin managers, simply copy the files
+from this repository to their respective locations in <code>~/.vim</code>:</p>
+
+<pre><code>cp plugin/lucky-markdown.vim ~/.vim/plugin
+cp doc/lucky-markdown.txt ~/.vim/doc
+</code></pre>
+
+<p>To generate the helptags for this help file, see |:helptags|.</p>
+
+<h2>
+<a id="usage" class="anchor" href="#usage" aria-hidden="true"><span class="octicon octicon-link"></span></a>Usage</h2>
+
+<p>After installing the plugin, an <code>omnicomplete</code> function is automatically
+configured for Markdown documents. You can invoke it with CTRL-X CTRL-O (see
+<code>i_CTRL-X_CTRL-O</code>) after your started writing a Markdown link.</p>
+
+<p>For example, you can complete the following two link syntaxes (the | is the
+current cursor):</p>
+
+<pre><code>[Ruby]:|
+[Ruby](
+</code></pre>
+
+<p>This will result in the following completed text:</p>
+
+<pre><code>[Ruby]: http://ruby-lang.org
+[Ruby](http://ruby-lang.org)
+</code></pre>
+
+<p>The text between the brackets will be used as the search query.</p>
+
+<p>Note the completion function is only set in files with <code>filetype</code> markdown. To
+enable it elsewhere, simply set <code>omnifunc</code> to <code>CompleteMarkdownLink</code>.</p>
+
+<h2>
+<a id="about" class="anchor" href="#about" aria-hidden="true"><span class="octicon octicon-link"></span></a>About</h2>
+
+<p><strong>Author</strong>: Arjan van der Gaag<br>
+<strong>License</strong>: MIT license<br>
+<strong>Issues</strong>: <a href="http://github.com/avdgaag/vim-lucky-markdown/issues">http://github.com/avdgaag/vim-lucky-markdown/issues</a><br>
+<strong>Source</strong>: <a href="http://github.com/avdgaag/vim-lucky-markdown">http://github.com/avdgaag/vim-lucky-markdown</a></p>
+      </section>
+    </div>
+    <footer>
+      <p>Project maintained by <a href="https://github.com/avdgaag">avdgaag</a></p>
+      <p>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></p>
+    </footer>
+    <!--[if !IE]><script>fixScale(document);</script><![endif]-->
+              <script type="text/javascript">
+            var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+            document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+          </script>
+          <script type="text/javascript">
+            try {
+              var pageTracker = _gat._getTracker("UA-20357800-1");
+            pageTracker._trackPageview();
+            } catch(err) {}
+          </script>
+
+  </body>
+</html>
